@@ -50,14 +50,14 @@ public class AlunoDao {
         if (c != null) {
             if (c.getCount() > 0) {
                 c.moveToFirst();
-                while (c.moveToNext()) {
+                do{
                     Aluno aluno = new Aluno();
 
                     aluno.setId(c.getLong(c.getColumnIndex("_id")));
                     aluno.setNome(c.getString(c.getColumnIndex("nome")));
                     aluno.setEmail(c.getString(c.getColumnIndex("email")));
                     lista.add(aluno);
-                }
+                }while(c.moveToNext());
             }
         }
 

@@ -33,12 +33,18 @@ public class ListActivity extends Activity {
 
     private void getAlunos() {
         AlunoDao dao = new AlunoDao(ListActivity.this);
-        lstAlunos = dao.getAlunos();
-        if (lstAlunos != null && lstAlunos.size() > 0) {
-            alunos = new String[lstAlunos.size()];
-            for (int i = 0; i < lstAlunos.size(); i++) {
-                alunos[i] = lstAlunos.get(i).getNome();
+        try {
+            lstAlunos = dao.getAlunos();
+            if (lstAlunos != null && lstAlunos.size() > 0) {
+                alunos = new String[lstAlunos.size()];
+                for (int i = 0; i < lstAlunos.size(); i++) {
+                    alunos[i] = lstAlunos.get(i).getNome();
+                }
+            }else{
+                alunos = new String[]{};
             }
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 
