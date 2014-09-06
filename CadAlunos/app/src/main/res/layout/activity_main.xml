@@ -12,8 +12,18 @@
         android:text="ALUNOS CADASTRADOS"
         android:textSize="22sp"
         android:gravity="center"
-        android:background="#99f614"
-        android:layout_marginBottom="10dp"/>
+        android:background="#99f614"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nome"
+        android:id="@+id/tvUser"
+        android:layout_below="@+id/tvHeader"
+        android:gravity="right"
+        android:padding="10dp"
+        android:background="#ffcc00"
+        android:textStyle="italic"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +31,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Nome"
         android:id="@+id/textView"
-        android:layout_below="@+id/tvHeader"
+        android:layout_below="@+id/tvUser"
         android:layout_marginLeft="10dp"/>
 
     <EditText
